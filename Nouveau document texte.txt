@@ -1,0 +1,12 @@
+Le programme doit analyser chaque phrase et proposer un émoji positif (sourire)/négatif(pleure)/neutre (:|) en fonction d'un score calculer en analysant les mots de la phrase, chaque mot sera comparé à ceux d'une liste de mots à connotation négative et positive, selon le cas, on ajoutera -1 ou +1 au score de la phrase
+
+liste negatif :
+ne, pas, non, n', peu, 
+
+liste positif :
+oui, merci, bien, 
+
+Penser a verifier la valeur du mot précédent car selon le cas , des mots comme "très" peuvent accentuer le caractère négatif ou positif d'un mot
+Bien si précédé de pas , rend le mot négatif
+
+Pour les separateur de phrase penser a gérer les ? ! ...
