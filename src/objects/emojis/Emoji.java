@@ -3,13 +3,14 @@ public class Emoji{
     private String unicode;
     private String name;
     private String emote;
+    private String word;
 
 //Constructor
-    public Emoji (String unicode){
+    public Emoji (String unicode, String name, String emote, String word){
         this.unicode = unicode;
         this.name = name;
         this.emote = emote;
-        
+        this.word = word
     }
 
 //Setters and Getters
@@ -17,7 +18,7 @@ public class Emoji{
         return this.unicode;
     }
 
-    public void setUnicode(){
+    public void setUnicode(String unicode){
         this.unicode = unicode;
     }
 
@@ -25,7 +26,7 @@ public class Emoji{
         return this.name;
     }
 
-    public void setName(){
+    public void setName(String name){
         this.name = name;
     }
 
@@ -33,7 +34,16 @@ public class Emoji{
         return this.emote;
     }
 
-    public void setEmote(){
+    public void setEmote(String emote){
         this.emote = emote;
+    }
+    
+
+    public String getWord(){
+        return this.word;
+    }
+
+    public void setWord(String word){
+        this.emote = word;
     }
 }
