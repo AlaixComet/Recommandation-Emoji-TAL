@@ -1,49 +1,65 @@
-public class Emoji{
+package objects.emojis;
+
+/**
+ * Emoji object allowing manipulation of the common data of every emoji
+ * All variables are Strings :
+ * <li>
+ * <ul>unicode</ul>
+ * <ul>name</ul>
+ * <ul>emote</ul>
+ * <ul>word (optional)</ul>
+ * </li>
+ */
+public class Emoji {
 
     private String unicode;
     private String name;
     private String emote;
     private String word;
 
-//Constructor
-    public Emoji (String unicode, String name, String emote, String word){
+    /**
+     *
+     * Class constructor
+     * @param unicode
+     * @param name
+     * @param emote
+     */
+    public Emoji(String unicode, String name, String emote) {
         this.unicode = unicode;
         this.name = name;
         this.emote = emote;
-        this.word = word
     }
 
-//Setters and Getters
-    public String getUnicode(){
-        return this.unicode;
+    //Setters and Getters
+    public String getUnicode() {
+        return unicode;
     }
 
-    public void setUnicode(String unicode){
+    public void setUnicode(String unicode) {
         this.unicode = unicode;
     }
 
-    public String getName(){
-        return this.name;
+    public String getName() {
+        return name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getEmote(){
-        return this.emote;
+    public String getEmote() {
+        return emote;
     }
 
-    public void setEmote(String emote){
+    public void setEmote(String emote) {
         this.emote = emote;
     }
-    
 
-    public String getWord(){
-        return this.word;
+    public String getWord() {
+        return word;
     }
 
-    public void setWord(String word){
-        this.emote = word;
+    public void setWord(String word) {
+        this.word = word;
     }
 }
