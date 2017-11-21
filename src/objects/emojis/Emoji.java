@@ -3,12 +3,12 @@ package objects.emojis;
 /**
  * Emoji object allowing manipulation of the common data of every emoji
  * All variables are Strings :
- * <li>
- * <ul>unicode</ul>
- * <ul>name</ul>
- * <ul>emote</ul>
- * <ul>word (optional)</ul>
- * </li>
+ * <ul>
+ *  <li>unicode</li>
+ *  <li>name</li>
+ *  <li>emote</li>
+ *  <li>word (optional)</li>
+ * </ul>
  */
 public class Emoji {
 
