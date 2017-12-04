@@ -1,12 +1,14 @@
 package objects.emojis;
 
+import java.util.HashMap;
+
 /**
  * FeelingEmoji object extends Emoji's object, adding the notion of score for every feeling we're associating emojis with
  * New variables are :
  * <ul>
  *  <li> float[] Score
  *      <ul>
- *          <li> pos/neutral/neg</li>
+ *          <li> pos</li>
  *          <li> joy</li>
  *          <li> sadness</li>
  *          <li> love</li>
@@ -20,7 +22,7 @@ package objects.emojis;
  */
 public class FeelingEmoji extends Emoji {
 
-    private float[] scores;
+    private HashMap scores;
 
     /**
      * Class constructor
@@ -30,17 +32,17 @@ public class FeelingEmoji extends Emoji {
      * @param emote
      * @param scores
      */
-    public FeelingEmoji(String unicode, String name, String emote, float[] scores) {
+    public FeelingEmoji(String unicode, String name, String emote, HashMap scores) {
         super(unicode, name, emote);
         this.scores = scores;
     }
 
     //Setters and Getters
-    public float[] getScores() {
+    public HashMap getScores() {
         return this.scores;
     }
 
-    public void setScores(float[] scores) {
+    public void setScores(HashMap scores) {
         this.scores = scores;
     }
 

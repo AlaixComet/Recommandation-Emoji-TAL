@@ -5,6 +5,7 @@ import objects.emojis.FeelingEmoji;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  * Methods creating java objects using the files
@@ -46,7 +47,7 @@ public class InitializeData {
     /**
      * Creates FeelingEmoji objects from csv file and keep them in an Array
      * the csv file lines are like :
-     * Unicode,Emoji and description, pos/neutral/neg, joy, sadness, love, surprise, fear, anger
+     * Unicode,Emoji and description, pos, joy, sadness, love, surprise, fear, anger
      *
      * @param csvFilename
      * @param parser
@@ -57,11 +58,10 @@ public class InitializeData {
         FeelingEmoji feelingEmoji;
         String emote;
         String name;
+        String feelings[]={"pos", "joy", "sadness", "love", "surprise", "fear", "anger"};
         ArrayList<String[]> lines = LoadData.getDataFromCSV(csvFilename, parser);
         //each line of the file is an object
         for (String[] line : lines) {
-            float[] scores = {Float.parseFloat(line[2]), Float.parseFloat(line[3]), Float.parseFloat(line[4]),
-                    Float.parseFloat(line[5]), Float.parseFloat(line[6]), Float.parseFloat(line[7]), Float.parseFloat(line[8])};
             //an emoji generaly takes 2 char, but some exception are 1 char
             if (!line[1].substring(1,2).equals(" ")){
             name = line[1].substring(3, line[1].length());
@@ -69,6 +69,10 @@ public class InitializeData {
             } else {
                 name = line[1].substring(2, line[1].length());
                 emote = line[1].substring(0, 1);
+            }
+            HashMap scores = new HashMap();
+            for (int i = 2; i<9; i++){
+                scores.put(feelings[i-2],line[i]);
             }
             feelingEmoji = new FeelingEmoji(line[0],  name, emote, scores);
             feelingEmojiArrayList.add(feelingEmoji);
