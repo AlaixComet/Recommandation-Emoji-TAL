@@ -1,5 +1,7 @@
 package objects.emojis;
 
+import java.util.ArrayList;
+
 /**
  * Emoji object allowing manipulation of the common data of every emoji
  * All variables are Strings :
@@ -7,7 +9,8 @@ package objects.emojis;
  *  <li>unicode</li>
  *  <li>name</li>
  *  <li>emote</li>
- *  <li>word (optional)</li>
+ *  <li>regex (optional)</li>
+ *  <li>popularity (optional)</li>
  * </ul>
  */
 public class Emoji {
@@ -15,7 +18,7 @@ public class Emoji {
     private String unicode;
     private String name;
     private String emote;
-    private String word;
+    private ArrayList<String> regex;
     private float popularity;
 
     /**
@@ -56,13 +59,9 @@ public class Emoji {
         this.emote = emote;
     }
 
-    public String getWord() {
-        return word;
-    }
+    public ArrayList<String> getRegex() { return regex;    }
 
-    public void setWord(String word) {
-        this.word = word;
-    }
+    public void setRegex(ArrayList<String> regex) { this.regex = regex;    }
 
     public float getPopulatity() {
         return this.popularity;
