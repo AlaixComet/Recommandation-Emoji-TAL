@@ -50,11 +50,7 @@ public class InitializeData {
                 name = line[1].substring(2, line[1].length());
                 emote = line[1].substring(0, 1);
             }
-            feelingEmoji = new FeelingEmoji(line[0],  name, emote, scores, Float.parseFloat(line[9]));
-            //If there is a word associated to the emoji we add it
-            if (!line[10].equals("")) {
-                feelingEmoji.setWord(line[10]);
-            }
+            feelingEmoji = new FeelingEmoji(line[0],  name, emote, scores);
             feelingEmojiArrayList.add(feelingEmoji);
         }
         return feelingEmojiArrayList;

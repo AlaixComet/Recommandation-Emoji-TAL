@@ -16,6 +16,7 @@ public class Emoji {
     private String name;
     private String emote;
     private String word;
+    private float popularity;
 
     /**
      *
@@ -61,5 +62,13 @@ public class Emoji {
 
     public void setWord(String word) {
         this.word = word;
+    }
+
+    public float getPopulatity() {
+        return this.popularity;
+    }
+
+    public void setPopularity(float popularity) {
+        this.popularity = popularity;
     }
 }

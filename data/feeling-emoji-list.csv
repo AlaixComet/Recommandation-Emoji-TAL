@@ -1,81 +1,79 @@
-1F644,🙄 face with rolling eyes,-1,-1,0,0,0,0,0,,
-1F625,😥 sad but relieved face,-1,-1,1,0,0,0,0,,
-1F62A,😪 sleepy face,-1,0,0,0,0,0,0,,
-1F62B,😫 tired face,-1,0,0,0,0,0,0,,
-1F634,😴 sleeping face,-1,0,0,0,0,0,0,,
-1F613,😓 downcast face with sweat,-1,0,0,0,0,0,0,,
-1F615,😕 confused face,-1,0,0,0,0,0,0,,
-2639 FE0F,☹️ frowning face,-1,-1,0,0,0,0,0,,
-2639,☹ frowning face,-1,-1,0,0,0,0,0,,
-1F641,🙁 slightly frowning face,-1,-1,0,0,0,0,0,,
-1F616,😖 confounded face,-1,-1,0,0,1,0,0,,
-1F61E,😞 disappointed face,-1,0,0,0,1,0,0,,
-1F61F,😟 worried face,-1,0,0,0,0,0,0,,
-1F624,😤 face with steam from nose,-1,-1,0,-1,0,0,1,,
-1F622,😢 crying face,-1,-1,1,0,0,0,0,,
-1F62D,😭 loudly crying face,-1,-1,1,0,0,0,0,,
-1F626,😦 frowning face with open mouth,-1,0,0,0,0,0,0,,
-1F627,😧 anguished face,-1,0,0,0,0,1,0,,
-1F628,😨 fearful face,-1,0,0,0,1,1,0,,
-1F629,😩 weary face,-1,0,0,0,0,1,0,,
-1F62C,😬 grimacing face,-1,0,0,0,0,1,0,,
-1F630,😰 anxious face with sweat,-1,0,0,0,0,1,0,,
-1F631,😱 face screaming in fear,-1,0,0,0,1,1,0,,
-1F633,😳 flushed face,-1,0,0,0,1,0,0,,
-1F635,😵 dizzy face,-1,0,0,0,0,0,0,,
-1F621,😡 pouting face,-1,-1,0,0,0,0,1,,
-1F620,😠 angry face,-1,-1,0,0,0,0,1,,
-1F637,😷 face with medical mask,-1,0,0,0,0,0,0,,malade
-1F912,🤒 face with thermometer,-1,0,0,0,0,0,0,,fièvre
-1F915,🤕 face with head-bandage,-1,0,0,0,0,0,0,,blessé
-1F922,🤢 nauseated face,-1,0,0,0,0,0,0,,malade
-1F92E,🤮 face vomiting,-1,,,,,,,,
-1F927,🤧 sneezing face,-1,0,0,0,0,0,0,,
-1F44E,👎 thumbs down,-1,0,0,0,0,0,0,,non
-1F4A2,💢 anger symbol,-1,-1,0,0,0,0,-1,,
-1F605,😅 grinning face with sweat,0,0,0,0,1,0,-1,,
-1F606,😆 grinning squinting face,0,0,0,0,1,0,-1,,
-1F914,🤔 thinking face,0,0,0,0,0,0,0,,
-1F610,😐 neutral face,0,0,0,0,0,0,0,,
-1F611,😑 expressionless face,0,0,0,0,0,0,0,,
-1F636,😶 face without mouth,0,0,0,0,0,0,0,,
-1F60F,😏 smirking face,0,0,0,0,0,0,0,,
-1F623,😣 persevering face,0,0,0,0,0,0,0,,
-1F910,🤐 zipper-mouth face,0,0,0,0,0,0,0,,
-1F62F,😯 hushed face,0,0,0,0,0,0,0,,
-1F61D,😝 squinting face with tongue,0,0,0,0,0,0,0,,
-1F924,🤤 drooling face,0,0,0,0,0,0,0,,
-1F612,😒 unamused face,0,0,0,0,0,0,0,,
-1F614,😔 pensive face,0,0,0,0,0,0,0,,
-1F643,🙃 upside-down face,0,0,0,0,0,0,0,,
-1F911,🤑 money-mouth face,0,0,0,0,0,0,0,,
-1F632,😲 astonished face,0,0,0,0,0,0,0,,
-1F4AA,💪 flexed biceps,0,0,0,0,0,0,0,,fort
-1F44C,👌 OK hand,0,0,0,0,0,0,0,,oui;ok
-1F4A4,💤 zzz,0,0,0,0,0,0,0,,
-1F600,😀 grinning face,1,1,-1,0,0,-1,-1,,
-1F601,😁 beaming face with smiling eyes,1,1,-1,0,0,-1,-1,,
-1F602,😂 face with tears of joy,1,1,-1,0,0,-1,-1,,lol
-1F923,🤣 rolling on the floor laughing,1,1,-1,0,0,-1,-1,,
-1F603,😃 grinning face with big eyes,1,1,-1,0,0,-1,-1,,
-1F604,😄 grinning face with smiling eyes,1,1,-1,0,0,-1,-1,,
-1F609,😉 winking face,1,0,-1,0,0,-1,-1,,wink
-1F60A,😊 smiling face with smiling eyes,1,1,-1,0,0,-1,-1,,
-1F60B,😋 face savoring food,1,1,-1,0,0,-1,-1,,
-1F60E,😎 smiling face with sunglasses,1,0,0,0,0,0,-1,,
-1F60D,😍 smiling face with heart-eyes,1,1,-1,1,0,-1,-1,,
-1F618,😘 face blowing a kiss,1,1,-1,1,0,-1,-1,,kiss
-1F617,😗 kissing face,1,1,-1,0,0,-1,-1,,
-1F619,😙 kissing face with smiling eyes,1,1,-1,0,0,-1,-1,,
-1F61A,😚 kissing face with closed eyes,1,1,-1,1,0,-1,-1,,
-263A,☺ smiling face,1,1,-1,0,0,-1,-1,,
-1F642,🙂 slightly smiling face,1,1,-1,0,0,-1,-1,,
-1F917,🤗 hugging face,1,1,-1,0,0,-1,-1,,hugg
-1F62E,😮 face with open mouth,1,0,0,0,0,0,0,,
-1F60C,😌 relieved face,1,0,0,0,0,0,0,,
-1F61B,😛 face with tongue,1,0,0,0,0,0,0,,
-1F61C,😜 winking face with tongue,1,0,0,0,0,0,0,,
-1F48F,💏 kiss,1,1,0,1,0,-1,-1,,kiss
-1F44D,👍 thumbs up,1,0,0,0,0,0,0,,oui;ok
-1F44B,👋 waving hand,1,0,0,0,0,0,0,,salut;bonjour;coucou
-2764,❤ red heart,1,0,0,1,0,-1,-1,,coeur
+1F644,🙄 face with rolling eyes,-1,-1,0,0,0,0,0
+1F625,😥 sad but relieved face,-1,-1,1,0,0,0,0
+1F62A,😪 sleepy face,-1,0,0,0,0,0,0
+1F62B,😫 tired face,-1,0,0,0,0,0,0
+1F634,😴 sleeping face,-1,0,0,0,0,0,0
+1F613,😓 downcast face with sweat,-1,0,0,0,0,0,0
+1F615,😕 confused face,-1,0,0,0,0,0,0
+2639,☹ frowning face,-1,-1,0,0,0,0,0
+1F641,🙁 slightly frowning face,-1,-1,0,0,0,0,0
+1F616,😖 confounded face,-1,-1,0,0,1,0,0
+1F61E,😞 disappointed face,-1,0,0,0,1,0,0
+1F61F,😟 worried face,-1,0,0,0,0,0,0
+1F624,😤 face with steam from nose,-1,-1,0,-1,0,0,1
+1F622,😢 crying face,-1,-1,1,0,0,0,0
+1F62D,😭 loudly crying face,-1,-1,1,0,0,0,0
+1F626,😦 frowning face with open mouth,-1,0,0,0,0,0,0
+1F627,😧 anguished face,-1,0,0,0,0,1,0
+1F628,😨 fearful face,-1,0,0,0,1,1,0
+1F629,😩 weary face,-1,0,0,0,0,1,0
+1F62C,😬 grimacing face,-1,0,0,0,0,1,0
+1F630,😰 anxious face with sweat,-1,0,0,0,0,1,0
+1F631,😱 face screaming in fear,-1,0,0,0,1,1,0
+1F633,😳 flushed face,-1,0,0,0,1,0,0
+1F635,😵 dizzy face,-1,0,0,0,0,0,0
+1F621,😡 pouting face,-1,-1,0,0,0,0,1
+1F620,😠 angry face,-1,-1,0,0,0,0,1
+1F637,😷 face with medical mask,-1,0,0,0,0,0,0
+1F912,🤒 face with thermometer,-1,0,0,0,0,0,0
+1F915,🤕 face with head-bandage,-1,0,0,0,0,0,0
+1F922,🤢 nauseated face,-1,0,0,0,0,0,0
+1F927,🤧 sneezing face,-1,0,0,0,0,0,0
+1F44E,👎 thumbs down,-1,0,0,0,0,0,0
+1F4A2,💢 anger symbol,-1,-1,0,0,0,0,-1
+1F605,😅 grinning face with sweat,0,0,0,0,1,0,-1
+1F606,😆 grinning squinting face,0,0,0,0,1,0,-1
+1F914,🤔 thinking face,0,0,0,0,0,0,0
+1F610,😐 neutral face,0,0,0,0,0,0,0
+1F611,😑 expressionless face,0,0,0,0,0,0,0
+1F636,😶 face without mouth,0,0,0,0,0,0,0
+1F60F,😏 smirking face,0,0,0,0,0,0,0
+1F623,😣 persevering face,0,0,0,0,0,0,0
+1F910,🤐 zipper-mouth face,0,0,0,0,0,0,0
+1F62F,😯 hushed face,0,0,0,0,0,0,0
+1F61D,😝 squinting face with tongue,0,0,0,0,0,0,0
+1F924,🤤 drooling face,0,0,0,0,0,0,0
+1F612,😒 unamused face,0,0,0,0,0,0,0
+1F614,😔 pensive face,0,0,0,0,0,0,0
+1F643,🙃 upside-down face,0,0,0,0,0,0,0
+1F911,🤑 money-mouth face,0,0,0,0,0,0,0
+1F632,😲 astonished face,0,0,0,0,0,0,0
+1F4AA,💪 flexed biceps,0,0,0,0,0,0,0
+1F44C,👌 OK hand,0,0,0,0,0,0,0
+1F4A4,💤 zzz,0,0,0,0,0,0,0
+1F600,😀 grinning face,1,1,-1,0,0,-1,-1
+1F601,😁 beaming face with smiling eyes,1,1,-1,0,0,-1,-1
+1F602,😂 face with tears of joy,1,1,-1,0,0,-1,-1
+1F923,🤣 rolling on the floor laughing,1,1,-1,0,0,-1,-1
+1F603,😃 grinning face with big eyes,1,1,-1,0,0,-1,-1
+1F604,😄 grinning face with smiling eyes,1,1,-1,0,0,-1,-1
+1F609,😉 winking face,1,0,-1,0,0,-1,-1
+1F60A,😊 smiling face with smiling eyes,1,1,-1,0,0,-1,-1
+1F60B,😋 face savoring food,1,1,-1,0,0,-1,-1
+1F60E,😎 smiling face with sunglasses,1,0,0,0,0,0,-1
+1F60D,😍 smiling face with heart-eyes,1,1,-1,1,0,-1,-1
+1F618,😘 face blowing a kiss,1,1,-1,1,0,-1,-1
+1F617,😗 kissing face,1,1,-1,0,0,-1,-1
+1F619,😙 kissing face with smiling eyes,1,1,-1,0,0,-1,-1
+1F61A,😚 kissing face with closed eyes,1,1,-1,1,0,-1,-1
+263A,☺ smiling face,1,1,-1,0,0,-1,-1
+1F642,🙂 slightly smiling face,1,1,-1,0,0,-1,-1
+1F917,🤗 hugging face,1,1,-1,0,0,-1,-1
+1F62E,😮 face with open mouth,1,0,0,0,0,0,0
+1F60C,😌 relieved face,1,0,0,0,0,0,0
+1F61B,😛 face with tongue,1,0,0,0,0,0,0
+1F61C,😜 winking face with tongue,1,0,0,0,0,0,0
+1F48F,💏 kiss,1,1,0,1,0,-1,-1
+1F44D,👍 thumbs up,1,0,0,0,0,0,0
+1F44B,👋 waving hand,1,0,0,0,0,0,0
+2764,❤ red heart,1,0,0,1,0,-1,-1
