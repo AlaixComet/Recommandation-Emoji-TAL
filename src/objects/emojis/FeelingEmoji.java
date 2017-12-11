@@ -21,7 +21,6 @@ package objects.emojis;
 public class FeelingEmoji extends Emoji {
 
     private float[] scores;
-    private float popularity;
 
     /**
      * Class constructor
@@ -30,12 +29,10 @@ public class FeelingEmoji extends Emoji {
      * @param name
      * @param emote
      * @param scores
-     * @param popularity
      */
-    public FeelingEmoji(String unicode, String name, String emote, float[] scores, float popularity) {
+    public FeelingEmoji(String unicode, String name, String emote, float[] scores) {
         super(unicode, name, emote);
         this.scores = scores;
-        this.popularity = popularity;
     }
 
     //Setters and Getters
@@ -46,14 +43,5 @@ public class FeelingEmoji extends Emoji {
     public void setScores(float[] scores) {
         this.scores = scores;
     }
-
-    public float getPopulatity() {
-        return this.popularity;
-    }
-
-    public void setPopularity(float popularity) {
-        this.popularity = popularity;
-    }
-
 
 }

@@ -4,6 +4,7 @@ import objects.emojis.Emoji;
 import objects.emojis.FeelingEmoji;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Methods creating java objects using the files
@@ -11,22 +12,41 @@ import java.util.ArrayList;
 public class InitializeData {
 
     /**
-     * Creates Emoji objects from csv file and keep them in an Array listed by popularity
+     * Creates Emoji objects from csv file and keep them in an Array
+     * the csv file lines are like :
+     * Unicode,Emoji and description, regex
      *
      * @param csvFilename
      * @param parser
      * @return ArrayList of initialized objects
      */
-    public static ArrayList<Emoji> initializeEmojis(String csvFilename, String parser) {
-        //TODO : create emoji objects from csv file and keep them in an Array listed by popularity
-        return null;
+    public static ArrayList<Emoji> initializeWordEmojis(String csvFilename, String parser) {
+        ArrayList<Emoji> wordEmojiArrayList = new ArrayList<>();
+        Emoji emoji;
+        String emote;
+        String name;
+        ArrayList<String[]> lines = LoadData.getDataFromCSV(csvFilename, parser);
+        //each line of the file is an object
+        for (String[] line : lines) {
+        //an emoji generaly takes 2 char, but some exception are 1 char
+            if (!line[1].substring(1,2).equals(" ")){
+                name = line[1].substring(3, line[1].length());
+                emote = line[1].substring(0, 2);
+            } else {
+                name = line[1].substring(2, line[1].length());
+                emote = line[1].substring(0, 1);
+            }
+            emoji = new Emoji(line[0],  name, emote);
+            emoji.setRegex(new ArrayList<>(Arrays.asList(line[2].split(";"))));
+            wordEmojiArrayList.add(emoji);
+        }
+        return wordEmojiArrayList;
     }
 
     /**
-     * Creates FeelingEmoji objects from csv file and keep them in an Array listed by popularity
+     * Creates FeelingEmoji objects from csv file and keep them in an Array
      * the csv file lines are like :
-     * Unicode,Emoji and description, pos/neutral/neg, joy, sadness, love, surprise, fear, anger, popularity, word
-     * Lines starting with "#" symbol must be ignored
+     * Unicode,Emoji and description, pos/neutral/neg, joy, sadness, love, surprise, fear, anger
      *
      * @param csvFilename
      * @param parser
@@ -50,11 +70,7 @@ public class InitializeData {
                 name = line[1].substring(2, line[1].length());
                 emote = line[1].substring(0, 1);
             }
-            feelingEmoji = new FeelingEmoji(line[0],  name, emote, scores, Float.parseFloat(line[9]));
-            //If there is a word associated to the emoji we add it
-            if (!line[10].equals("")) {
-                feelingEmoji.setWord(line[10]);
-            }
+            feelingEmoji = new FeelingEmoji(line[0],  name, emote, scores);
             feelingEmojiArrayList.add(feelingEmoji);
         }
         return feelingEmojiArrayList;
