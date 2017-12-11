@@ -12,7 +12,7 @@ public class Main {
 
 /*
         for (FeelingEmoji feelingE : feelingEmojiArrayList) {
-            System.out.println(feelingE.getEmote() +" / "+feelingE.getName() );
+            System.out.println(feelingE.getEmote() +" / "+feelingE.getName() +"     "+feelingE.getScores().get("pos") );
         }
 */
 
