@@ -19,11 +19,6 @@ public class Main {
         Collections.sort(feelingEmojiArrayList);
         Collections.sort(wordEmojiArrayList);
 
-        for (FeelingEmoji feelingE : feelingEmojiArrayList) {
-            System.out.println(feelingE.getEmote() +" / "+feelingE.getName() +"     "+feelingE.getPopulatity());
-        }
-
-
 /*
         for (FeelingEmoji feelingE : feelingEmojiArrayList) {
             System.out.println(feelingE.getEmote() +" / "+feelingE.getName() +"     "+feelingE.getScores().get("pos") );
