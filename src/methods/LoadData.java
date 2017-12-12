@@ -33,4 +33,20 @@ public class LoadData {
 	    }
 		return lines;
     }
+
+    public static String getDataFromTxtSingleString(String filename){
+		String string="";
+		String line;
+		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+
+			while ((line = br.readLine()) != null) {
+				string = string+line;
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return string;
+	}
 }

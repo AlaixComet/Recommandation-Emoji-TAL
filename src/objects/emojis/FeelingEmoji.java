@@ -20,7 +20,7 @@ import java.util.HashMap;
  *  <li>float Popularity</li>
  * </ul>
  */
-public class FeelingEmoji extends Emoji {
+public class FeelingEmoji extends Emoji{
 
     private HashMap scores;
 

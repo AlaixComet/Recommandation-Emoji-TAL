@@ -6,6 +6,8 @@ import objects.emojis.FeelingEmoji;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Methods creating java objects using the files
@@ -80,15 +82,29 @@ public class InitializeData {
         return feelingEmojiArrayList;
     }
 
-    /**
-     * Create dictionaries objects from csv file
-     *
-     * @param csvFilename
-     * @param parser
-     * @return ArrayList of initialized objects
-     */
-    public static ArrayList<Object> initializeDictionaries(String csvFilename, String parser) {
-        //TODO : create dictionaries objects from csv file and keep them in Arrays (??)
-        return null;
+    public static ArrayList<Emoji> setPopularityOfEmojiArray(ArrayList<Emoji> emojiArrayList,String filename){
+        String text =LoadData.getDataFromTxtSingleString(filename);
+        for (int i = 0; i<emojiArrayList.size();i++) {
+            Pattern regex = Pattern.compile("id=\"score-"+emojiArrayList.get(i).getUnicode()+"\">(\\d*)</span>");
+            Matcher m = regex.matcher(text);
+            if (m.find()) {
+                int score = Integer.parseInt(m.group(1));
+                emojiArrayList.get(i).setPopularity(score);
+            }
+        }
+        return emojiArrayList;
+    }
+
+    public static ArrayList<FeelingEmoji> setPopularityOfFeelingEmojiArray(ArrayList<FeelingEmoji> feelingEmojiArrayList,String filename){
+        String text =LoadData.getDataFromTxtSingleString(filename);
+        for (int i = 0; i<feelingEmojiArrayList.size();i++) {
+            Pattern regex = Pattern.compile("id=\"score-"+feelingEmojiArrayList.get(i).getUnicode()+"\">(\\d*)</span>");
+            Matcher m = regex.matcher(text);
+            if (m.find()) {
+                int score = Integer.parseInt(m.group(1));
+                feelingEmojiArrayList.get(i).setPopularity(score);
+            }
+        }
+        return feelingEmojiArrayList;
     }
 }
