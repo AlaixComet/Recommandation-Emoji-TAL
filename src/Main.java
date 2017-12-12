@@ -2,13 +2,27 @@ import objects.emojis.Emoji;
 import objects.emojis.FeelingEmoji;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+        //initialisation of emoji corpus
         ArrayList<FeelingEmoji> feelingEmojiArrayList = methods.InitializeData.initializeFeelingEmojis("data/feeling-emoji-list.csv",",");
         ArrayList<Emoji> wordEmojiArrayList = methods.InitializeData.initializeWordEmojis("data/word-emoji-list.csv",",");
+        //emoji popularity
+        feelingEmojiArrayList = methods.InitializeData.setPopularityOfFeelingEmojiArray(feelingEmojiArrayList,"data/emoji-popularity.txt");
+        wordEmojiArrayList = methods.InitializeData.setPopularityOfEmojiArray(wordEmojiArrayList,"data/emoji-popularity.txt");
+        //sorting by popularity
+        Collections.sort(feelingEmojiArrayList);
+        Collections.sort(wordEmojiArrayList);
+
+        for (FeelingEmoji feelingE : feelingEmojiArrayList) {
+            System.out.println(feelingE.getEmote() +" / "+feelingE.getName() +"     "+feelingE.getPopulatity());
+        }
+
 
 /*
         for (FeelingEmoji feelingE : feelingEmojiArrayList) {

@@ -13,13 +13,13 @@ import java.util.ArrayList;
  *  <li>popularity (optional)</li>
  * </ul>
  */
-public class Emoji {
+public class Emoji  implements Comparable<Emoji> {
 
     private String unicode;
     private String name;
     private String emote;
     private ArrayList<String> regex;
-    private float popularity;
+    private int popularity;
 
     /**
      *
@@ -63,11 +63,16 @@ public class Emoji {
 
     public void setRegex(ArrayList<String> regex) { this.regex = regex;    }
 
-    public float getPopulatity() {
+    public int getPopulatity() {
         return this.popularity;
     }
 
-    public void setPopularity(float popularity) {
+    public void setPopularity(int popularity) {
         this.popularity = popularity;
+    }
+
+    @Override
+    public int compareTo(Emoji o) {
+        return o.getPopulatity() - this.getPopulatity();
     }
 }
