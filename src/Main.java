@@ -3,7 +3,6 @@ import objects.emojis.FeelingEmoji;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
@@ -19,6 +18,7 @@ public class Main {
         Collections.sort(feelingEmojiArrayList);
         Collections.sort(wordEmojiArrayList);
 
+        //parcours list exemples and tests
 /*
         for (FeelingEmoji feelingE : feelingEmojiArrayList) {
             System.out.println(feelingE.getEmote() +" / "+feelingE.getName() +"     "+feelingE.getScores().get("pos") );
@@ -29,12 +29,14 @@ public class Main {
             System.out.println(wordE.getEmote() +" / "+wordE.getRegex().get(0));
         }
 */
+
         System.out.println("Entrez texte :");
         Scanner sc = new Scanner (System.in);
         String text = sc.nextLine();
         ArrayList<Emoji> recommendeddEmojiList = new ArrayList<>();
 
         //Recommendation type 1 :
+        //TODO
 
         //Recommendation type 2 :
         for (Emoji wordE : wordEmojiArrayList) {
@@ -53,9 +55,6 @@ public class Main {
         for ( Emoji e: recommendeddEmojiList) {
             System.out.println(e.getEmote());
 
-
-
-     //   System.out.println("j'aime les chevaux".matches(".*(^|\\s)cheva(ux|l)(\\s|$).*"));
-    }
+        }
     }
 }
