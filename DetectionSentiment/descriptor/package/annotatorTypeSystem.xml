@@ -1,0 +1,1064 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+    <name>package.annotatorTypeSystem</name>
+    <imports>
+        <import location="../BasicTypeSystem.xml"/>
+    </imports>
+    <types>
+        <typeDescription>
+            <name>package.annotator.Plus</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PeurPl</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhPeur1</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhPeur0</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhPeur3</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhPeur2</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.TristeMo</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoColere3</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.JoiePl</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoColere2</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.ColerePl</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoColere1</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.Mot</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.ColereMo</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.VerbJoie</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.TristePl</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.VerbColere</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PeurMo</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhColere06</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhColere04</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhColere02</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.VerbTriste</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoColere12</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoColere14</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoColere16</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.Joie</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhSurprise08</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhColere08</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhColere18</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhSurprise06</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhDegout22</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhTriste3</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhTriste2</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhColere16</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhSurprise04</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhDegout24</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhTriste1</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhTriste0</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhColere14</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhSurprise02</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhDegout26</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoJoie08</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhColere12</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhDegout28</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.JoieMo</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoJoie06</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoColere06</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoJoie04</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoColere08</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoJoie02</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhTriste04</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhTriste06</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoColere22</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoPeur02</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoColere24</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhTriste02</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoColere26</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.Non</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoPeur08</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoPeur04</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoPeur06</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhSurprise18</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhColere28</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhSurprise16</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhDegout12</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhColere26</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhSurprise14</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhDegout14</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoJoie18</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhColere2</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhColere24</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhColere3</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhSurprise12</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhDegout16</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoJoie16</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhColere0</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhColere1</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhColere22</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhDegout18</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoJoie14</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoColere18</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoJoie12</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoPeur12</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoPeur14</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhDegout08</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoPeur16</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoPeur18</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhPeur02</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhDegout2</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhDegout3</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhPeur04</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhDegout0</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhDegout02</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhDegout1</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhDegout04</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhDegout06</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhPeur06</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhPeur08</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoPeur22</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.Degout</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoPeur24</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoColere02</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.Surprise</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoColere04</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhJoie0</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.SurpriseMo</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhJoie1</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoPeur26</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhJoie2</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhJoie3</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoPeur28</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoSurprise1</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoSurprise2</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoSurprise3</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.Peur</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoTriste1</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoTriste2</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoTriste3</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoSurprise28</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoSurprise22</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhPeur24</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhPeur26</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoSurprise26</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoSurprise24</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhPeur22</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhPeur28</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.DegoutPl</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoTriste28</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhJoie28</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhJoie26</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhJoie24</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoDegout04</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhJoie22</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoDegout02</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoDegout08</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhPeur14</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoDegout06</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhPeur16</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhPeur12</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhPeur18</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhTriste14</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhTriste16</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhJoie18</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhTriste12</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoSurprise08</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhJoie16</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoSurprise06</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhJoie14</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhJoie12</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhSurprise28</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhSurprise26</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhSurprise24</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoSurprise04</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.SurprisePl</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhSurprise22</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoSurprise02</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoJoie28</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoColere28</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoJoie26</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoJoie24</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhTriste08</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoJoie22</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhTriste26</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhTriste28</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhTriste22</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhJoie08</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhTriste24</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhJoie06</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoSurprise18</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhJoie04</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoSurprise16</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhJoie02</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoSurprise14</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoSurprise12</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhTriste18</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoTriste04</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoTriste02</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.VerbPeur</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoDegout1</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoDegout3</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoDegout2</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoJoie3</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.Colere</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoJoie1</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoJoie2</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoTriste18</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoTriste16</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoDegout12</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoPeur2</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoPeur3</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoDegout16</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoPeur1</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoDegout14</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoDegout18</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoTriste26</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.Triste</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoTriste24</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoTriste22</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.DegoutMo</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoTriste08</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoTriste06</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoDegout22</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoDegout26</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoDegout24</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoDegout28</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoTriste14</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhSurprise3</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhSurprise2</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhMoTriste12</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhSurprise1</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>package.annotator.PhSurprise0</name>
+            <description>Type defined in package.annotator</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+    </types>
+</typeSystemDescription>

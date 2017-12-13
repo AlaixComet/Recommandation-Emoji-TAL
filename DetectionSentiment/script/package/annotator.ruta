@@ -1,0 +1,232 @@
+PACKAGE package;
+
+//On stocke les dictionnaires dans des variables Wordlist
+//Elles permettront d'annoter les mots
+//On en crée une par sentiment
+WORDLIST JoieList="joie.txt";
+WORDLIST TristeList="tristesse.txt";
+WORDLIST ColereList="colere.txt";
+WORDLIST SurpriseList="surprise.txt";
+WORDLIST PeurList="peur.txt";
+WORDLIST DegoutList="degout.txt";
+
+//Pareil pour les verbes
+WORDLIST VerbJoieList="VerbJoie.txt";
+WORDLIST VerbColereList="VerbColere.txt";
+WORDLIST VerbPeurList="VerbPeur.txt";
+WORDLIST VerbTristeList="VerbTriste.txt";
+
+//Et pour les amplificateurs/negation
+WORDLIST Amplificateur="amplificateur.txt";
+WORDLIST Negation="negation.txt";
+
+//On crée les annotations qui seront affectées aux mots contenus dans les dictionnaires
+DECLARE Joie, Triste, Colere, Surprise, Peur, Degout;
+DECLARE VerbJoie, VerbColere, VerbPeur, VerbTriste;
+
+//Comme on ne peut pas renvoyer de numérique, on crée une annotation en fonction de la note
+//Donc on crée une annotation pour chaque note entre -3 et 3 (avec un intervalle de 0.2), pour chaque sentiment
+//Donc par exemple si la phrase a pour note 0.6 pour la joie, cette phrase sera annotée PhJoie06
+//Lorsque la note est inférieur à 0, le nom de l'annotaion contient Mo (ex:PhMoJoie02, PhMoTriste26,...)
+//On a alors 31 annotations possible pour chaque sentiment
+//On déclare alors toutes ces annotations
+DECLARE PhJoie0, PhJoie02, PhJoie04, PhJoie06, PhJoie08, PhJoie1, PhJoie12, PhJoie14, PhJoie16, PhJoie18, PhJoie2, PhJoie22, PhJoie24, PhJoie26, PhJoie28, PhJoie3;
+DECLARE PhMoJoie02, PhMoJoie04, PhMoJoie06, PhMoJoie08, PhMoJoie1, PhMoJoie12, PhMoJoie14, PhMoJoie16, PhMoJoie18, PhMoJoie2, PhMoJoie22, PhMoJoie24, PhMoJoie26, PhMoJoie28, PhMoJoie3;
+DECLARE PhTriste0, PhTriste02, PhTriste04, PhTriste06, PhTriste08, PhTriste1, PhTriste12, PhTriste14, PhTriste16, PhTriste18, PhTriste2, PhTriste22, PhTriste24, PhTriste26, PhTriste28, PhTriste3;
+DECLARE PhMoTriste02, PhMoTriste04, PhMoTriste06, PhMoTriste08, PhMoTriste1, PhMoTriste12, PhMoTriste14, PhMoTriste16, PhMoTriste18, PhMoTriste2, PhMoTriste22, PhMoTriste24, PhMoTriste26, PhMoTriste28, PhMoTriste3;
+DECLARE PhColere0, PhColere02, PhColere04, PhColere06, PhColere08, PhColere1, PhColere12, PhColere14, PhColere16, PhColere18, PhColere2, PhColere22, PhColere24, PhColere26, PhColere28, PhColere3;
+DECLARE PhMoColere02, PhMoColere04, PhMoColere06, PhMoColere08, PhMoColere1, PhMoColere12, PhMoColere14, PhMoColere16, PhMoColere18, PhMoColere2, PhMoColere22, PhMoColere24, PhMoColere26, PhMoColere28, PhMoColere3;
+DECLARE PhSurprise0, PhSurprise02, PhSurprise04, PhSurprise06, PhSurprise08, PhSurprise1, PhSurprise12, PhSurprise14, PhSurprise16, PhSurprise18, PhSurprise2, PhSurprise22, PhSurprise24, PhSurprise26, PhSurprise28, PhSurprise3;
+DECLARE PhMoSurprise02, PhMoSurprise04, PhMoSurprise06, PhMoSurprise08, PhMoSurprise1, PhMoSurprise12, PhMoSurprise14, PhMoSurprise16, PhMoSurprise18, PhMoSurprise2, PhMoSurprise22, PhMoSurprise24, PhMoSurprise26, PhMoSurprise28, PhMoSurprise3;
+DECLARE PhPeur0, PhPeur02, PhPeur04, PhPeur06, PhPeur08, PhPeur1, PhPeur12, PhPeur14, PhPeur16, PhPeur18, PhPeur2, PhPeur22, PhPeur24, PhPeur26, PhPeur28, PhPeur3;
+DECLARE PhMoPeur02, PhMoPeur04, PhMoPeur06, PhMoPeur08, PhMoPeur1, PhMoPeur12, PhMoPeur14, PhMoPeur16, PhMoPeur18, PhMoPeur2, PhMoPeur22, PhMoPeur24, PhMoPeur26, PhMoPeur28, PhMoPeur3;
+DECLARE PhDegout0, PhDegout02, PhDegout04, PhDegout06, PhDegout08, PhDegout1, PhDegout12, PhDegout14, PhDegout16, PhDegout18, PhDegout2, PhDegout22, PhDegout24, PhDegout26, PhDegout28, PhDegout3;
+DECLARE PhMoDegout02, PhMoDegout04, PhMoDegout06, PhMoDegout08, PhMoDegout1, PhMoDegout12, PhMoDegout14, PhMoDegout16, PhMoDegout18, PhMoDegout2, PhMoDegout22, PhMoDegout24, PhMoDegout26, PhMoDegout28, PhMoDegout3;
+
+//On déclare aussi les annotations des amplificateurs et des négations
+DECLARE Plus, Non;
+
+//Lorque qu'un mot est accompagné d'un amplificateur il change d'annotation
+//Il garde le sentiment mais devient "plus", donc on ajoute Pl à l'annotation
+DECLARE JoiePl, TristePl, ColerePl, SurprisePl, PeurPl, DegoutPl;
+//Même principe pour les négations avec les "moins"
+DECLARE JoieMo, TristeMo, ColereMo, SurpriseMo, PeurMo, DegoutMo;
+
+//On annotera tous les mots annotés pour un sentiment
+//On pourra alors compter le nombre d'annotation total
+DECLARE Mot;
+
+//On crée des compteurs pour chaque sentiment, chaque sentiment amplifié, chaque sentiment nié,...
+INT ComptJoie, ComptTriste, ComptColere, ComptSurprise, ComptPeur, ComptDegout;
+INT CmpJPl, CmpTrPl, CmpCPl, CmpSPl, CmpPPl, CmpDPl;
+INT CmpJMo, CmpTrMo, CmpCMo, CmpSMo, CmpPMo, CmpDMo;
+INT ComptVerbJoie, ComptVerbColere, ComptVerbPeur, ComptVerbTriste;
+INT ComptMot;
+
+//MARFAST permet d'annoter tous les mots du dictionnaire passé en paramètre, dans le "document"
+//Ainsi, les mots qui sont dans le document et dans le dictionnaire JoieList sont annotés Joie
+Document{->MARKFAST(Joie, JoieList)};
+Document{->MARKFAST(Triste, TristeList)};
+Document{->MARKFAST(Colere, ColereList)};
+Document{->MARKFAST(Surprise, SurpriseList)};
+Document{->MARKFAST(Peur, PeurList)};
+Document{->MARKFAST(Degout, DegoutList)};
+
+Document{->MARKFAST(VerbJoie, VerbJoieList)};
+Document{->MARKFAST(VerbColere, VerbColereList)};
+Document{->MARKFAST(VerbPeur, VerbPeurList)};
+Document{->MARKFAST(VerbTriste, VerbTristeList)};
+
+Document{->MARKFAST(Plus, Amplificateur)};
+Document{->MARKFAST(Non, Negation)};
+
+//Les mots annotés precédés d'un amplificateur prennent une nouvelle annotation
+//Par exemple si un mot annoté Joie est précédé d'un mot annoté Plus, cet ensemble de 2 mots est annoté JoiePl 
+//On enlève ensuite l'annotation de base
+(Plus Joie){-> MARK(JoiePl)};         
+Plus Joie{-> UNMARK(Joie)};           
+(Plus Triste){-> MARK(TristePl)};
+Plus Triste{-> UNMARK(Triste)};
+(Plus Colere){-> MARK(ColerePl)};
+Plus Colere{-> UNMARK(Colere)};
+(Plus Surprise){-> MARK(SurprisePl)};
+Plus Surprise{-> UNMARK(Surprise)};
+(Plus Peur){-> MARK(PeurPl)};
+Plus Peur{-> UNMARK(Peur)};
+(Plus Degout){-> MARK(DegoutPl)};
+Plus Degout{-> UNMARK(Degout)};
+
+//Pour les verbes, l'amplificateur se trouve après, mais c'est le même principe
+(VerbJoie Plus){-> MARK(JoiePl)};
+VerbJoie {-> UNMARK(VerbJoie)} Plus;
+(VerbColere Plus){-> MARK(ColerePl)};
+VerbColere {-> UNMARK(VerbColere)} Plus;
+(VerbPeur Plus){-> MARK(PeurPl)};
+VerbPeur {-> UNMARK(VerbPeur)} Plus;
+(VerbTriste Plus){-> MARK(TristePl)};
+VerbTriste {-> UNMARK(VerbTriste)} Plus;
+
+//Les mots annotés précédés d'une négation sont annotés differement
+//C'est le même principe que pour les amplificateurs
+//On enleve ensuite l'annotation de base
+(Non Joie) {-> MARK(JoieMo)};       
+Non Joie {-> UNMARK(Joie)};
+(Non Triste) {->MARK(TristeMo)};
+Non Triste {-> UNMARK(Triste)};
+(Non Colere) {->MARK(ColereMo)};
+Non Colere {-> UNMARK(Colere)};
+(Non Surprise) {->MARK(SurpriseMo)};
+Non Surprise {-> UNMARK(Surprise)};
+(Non Peur) {->MARK(PeurMo)};
+Non Peur {-> UNMARK(Peur)};
+(Non Degout) {->MARK(DegoutMo)};
+Non Degout {-> UNMARK(Degout)};
+
+//Pour les verbes, la négation se trouve après mais c'est le même principe
+//Une verbe joie nié peut aussi bien signifier la tristesse et la colère
+//Donc on l'annote des deux façons
+(VerbJoie Non) {-> MARK(Triste), MARK(Colere)};
+VerbJoie {-> UNMARK(VerbJoie)} Non;
+(VerbColere Non) {-> MARK(Joie)};
+VerbColere {-> UNMARK(VerbColere)} Non;
+VerbPeur {-> UNMARK(VerbPeur)} Non;
+VerbTriste {-> UNMARK(VerbTriste)} Non;
+
+//Chaque mot annoté est aussi annoté de l'annotation Mot
+Joie{->MARK(Mot)};
+JoiePl{->MARK(Mot)};
+JoieMo{->MARK(Mot)};
+Triste{->MARK(Mot)};
+TristePl{->MARK(Mot)};
+TristeMo{->MARK(Mot)};
+Colere{->MARK(Mot)};
+ColerePl{->MARK(Mot)};
+ColereMo{->MARK(Mot)};
+Surprise{->MARK(Mot)};
+SurprisePl{->MARK(Mot)};
+SurpriseMo{->MARK(Mot)};
+Peur{->MARK(Mot)};
+PeurPl{->MARK(Mot)};
+PeurMo{->MARK(Mot)};
+Degout{->MARK(Mot)};
+DegoutPl{->MARK(Mot)};
+DegoutMo{->MARK(Mot)};
+
+VerbJoie{->MARK(Mot)};
+VerbColere{->MARK(Mot)};
+VerbPeur{->MARK(Mot)};
+VerbTriste{->MARK(Mot)};
+
+//On compte le nombre de mots et on l'ajoute à la variable CommptMot
+Document{COUNT(Mot, ComptMot)};
+
+//Le principe est le même pour tous les sentiments
+
+//On compte le nombre de mots annotés Joie et on stocke ce nombre à ComptJoie 
+Document{COUNT(Joie, ComptJoie)};
+//On fait pareil pour les JoiePl, qui correspond aux mots amplifiés
+Document{COUNT(JoiePl, CmpJPl)};
+//On fait pareil pour les JoieMo, qui correspond aux mots niés
+Document{COUNT(JoieMo, CmpJMo)};
+//Et pareil pour les verbes
+Document{COUNT(VerbJoie, ComptVerbJoie)}
+//Comme les numériques ne peuvent pas contenir des décimaux, on multiplie tout par 10, pour avoir des entiers
+//De plus, les mots amplifiés valent 3 fois plus qu'une annotation normale (coefficient choisi arbitrairement)
+//Donc on multiplie par 3 et par 10 les mots amplifiés, donc par 30
+//Les mots normaux et les mots niés sont multipliés par 10
+Document{-> ASSIGN(CmpJMo, CmpJMo*10)};
+//On calcul ensuite le score du sentiment
+//Pour le calculer, on additionne le score de mots "normaux" avec le score des mots amplifiés et on soustrait le score des niés
+//On divise ensuite ce total par le nombre total de mots annotés, pour avoir un coefficient
+//Comme on ne peux pas avoir de nombre négatif, on ajoute 30
+//Ainsi on se retrouve avec une note comprise entre 0 et 60 pour le sentiment
+Document{IF(ComptMot!=0)-> ASSIGN(ComptJoie, (((ComptJoie+ComptVerbJoie)*10+CmpJPl*30-CmpJMo)/ComptMot)+30)};
+//On applique une multitude de condition pour annotés la phrase en fonction de la note
+//Donc par exemple si la note est entre 32 et 30, cela correspond en réalité à une note entre 0 et 0.2 donc on l'annote PhJoie0
+//Et ainsi de suite pour tous les intervalles
+Document{AND(ComptJoie<32, ComptJoie>=30) ->MARK(PhJoie0)};Document{AND(ComptJoie<34, ComptJoie>=32)->MARK(PhJoie02)};Document{AND(ComptJoie<36, ComptJoie>=34)->MARK(PhJoie04)};Document{AND(ComptJoie<38, ComptJoie>=36)->MARK(PhJoie06)};Document{AND(ComptJoie<40, ComptJoie>=38)->MARK(PhJoie08)};Document{AND(ComptJoie<42, ComptJoie>=40)->MARK(PhJoie1)};Document{AND(ComptJoie<44, ComptJoie>=42)->MARK(PhJoie12)};Document{AND(ComptJoie<46, ComptJoie>=44)->MARK(PhJoie14)};Document{AND(ComptJoie<48, ComptJoie>=46)->MARK(PhJoie16)};Document{AND(ComptJoie<50, ComptJoie>=48)->MARK(PhJoie18)};Document{AND(ComptJoie<52, ComptJoie>=50)->MARK(PhJoie2)};Document{AND(ComptJoie<54, ComptJoie>=52)->MARK(PhJoie22)};Document{AND(ComptJoie<56, ComptJoie>=54)->MARK(PhJoie24)};Document{AND(ComptJoie<58, ComptJoie>=56)->MARK(PhJoie26)};Document{AND(ComptJoie<60, ComptJoie>=58)->MARK(PhJoie28)};Document{IF(ComptJoie==60)->MARK(PhJoie3)};
+Document{AND(ComptJoie<30, ComptJoie>=28)->MARK(PhMoJoie02)};Document{AND(ComptJoie<28, ComptJoie>=26)->MARK(PhMoJoie04)};Document{AND(ComptJoie<26, ComptJoie>=24)->MARK(PhMoJoie06)};Document{AND(ComptJoie<24, ComptJoie>=22)->MARK(PhMoJoie08)};Document{AND(ComptJoie<22, ComptJoie>=20)->MARK(PhMoJoie1)};Document{AND(ComptJoie<20, ComptJoie>=18)->MARK(PhMoJoie12)};Document{AND(ComptJoie<18, ComptJoie>=16)->MARK(PhMoJoie14)};Document{AND(ComptJoie<16, ComptJoie>=14)->MARK(PhMoJoie16)};Document{AND(ComptJoie<14, ComptJoie>=12)->MARK(PhMoJoie18)};Document{AND(ComptJoie<12, ComptJoie>=10)->MARK(PhMoJoie2)};Document{AND(ComptJoie<10, ComptJoie>=8)->MARK(PhMoJoie22)};Document{AND(ComptJoie<8, ComptJoie>=6)->MARK(PhMoJoie24)};Document{AND(ComptJoie<6, ComptJoie>=4)->MARK(PhMoJoie26)};Document{AND(ComptJoie<4, ComptJoie>=2)->MARK(PhMoJoie28)};Document{IF(ComptJoie<2)->MARK(PhMoJoie3)};
+
+Document{COUNT(Triste, ComptTriste)};
+Document{COUNT(TristePl, CmpTrPl)};
+Document{COUNT(TristeMo, CmpTrMo)};
+Document{COUNT(VerbTriste, ComptVerbTriste)}
+Document{-> ASSIGN(CmpTrMo, CmpTrMo*10)};
+Document{IF(ComptMot!=0)-> ASSIGN(ComptTriste, (((ComptTriste+ComptVerbTriste)*10+CmpTrPl*30-CmpTrMo)/ComptMot)+30)};
+Document{AND(ComptTriste<32, ComptTriste>=30)->MARK(PhTriste0)};Document{AND(ComptTriste<34, ComptTriste>=32)->MARK(PhTriste02)};Document{AND(ComptTriste<36, ComptTriste>=34)->MARK(PhTriste04)};Document{AND(ComptTriste<38, ComptTriste>=36)->MARK(PhTriste06)};Document{AND(ComptTriste<40, ComptTriste>=38)->MARK(PhTriste08)};Document{AND(ComptTriste<42, ComptTriste>=40)->MARK(PhTriste1)};Document{AND(ComptTriste<44, ComptTriste>=42)->MARK(PhTriste12)};Document{AND(ComptTriste<46, ComptTriste>=44)->MARK(PhTriste14)};Document{AND(ComptTriste<48, ComptTriste>=46)->MARK(PhTriste16)};Document{AND(ComptTriste<50, ComptTriste>=48)->MARK(PhTriste18)};Document{AND(ComptTriste<52, ComptTriste>=50)->MARK(PhTriste2)};Document{AND(ComptTriste<54, ComptTriste>=52)->MARK(PhTriste22)};Document{AND(ComptTriste<56, ComptTriste>=54)->MARK(PhTriste24)};Document{AND(ComptTriste<58, ComptTriste>=56)->MARK(PhTriste26)};Document{AND(ComptTriste<60, ComptTriste>=58)->MARK(PhTriste28)};Document{IF(ComptTriste==60)->MARK(PhTriste3)};
+Document{AND(ComptTriste<30, ComptTriste>=28)->MARK(PhMoTriste02)};Document{AND(ComptTriste<28, ComptTriste>=26)->MARK(PhMoTriste04)};Document{AND(ComptTriste<26, ComptTriste>=24)->MARK(PhMoTriste06)};Document{AND(ComptTriste<24, ComptTriste>=22)->MARK(PhMoTriste08)};Document{AND(ComptTriste<22, ComptTriste>=20)->MARK(PhMoTriste1)};Document{AND(ComptTriste<20, ComptTriste>=18)->MARK(PhMoTriste12)};Document{AND(ComptTriste<18, ComptTriste>=16)->MARK(PhMoTriste14)};Document{AND(ComptTriste<16, ComptTriste>=14)->MARK(PhMoTriste16)};Document{AND(ComptTriste<14, ComptTriste>=12)->MARK(PhMoTriste18)};Document{AND(ComptTriste<12, ComptTriste>=10)->MARK(PhMoTriste2)};Document{AND(ComptTriste<10, ComptTriste>=8)->MARK(PhMoTriste22)};Document{AND(ComptTriste<8, ComptTriste>=6)->MARK(PhMoTriste24)};Document{AND(ComptTriste<6, ComptTriste>=4)->MARK(PhMoTriste26)};Document{AND(ComptTriste<4, ComptTriste>=2)->MARK(PhMoTriste28)};Document{IF(ComptTriste<2)->MARK(PhMoTriste3)};
+
+Document{COUNT(Colere, ComptColere)};
+Document{COUNT(ColerePl, CmpCPl)};
+Document{COUNT(ColereMo, CmpCMo)};
+Document{COUNT(VerbColere, ComptVerbColere)};
+Document{-> ASSIGN(CmpCMo, CmpCMo*10)};
+Document{IF(ComptMot!=0)-> ASSIGN(ComptColere, (((ComptColere+ComptVerbColere)*10+CmpCPl*30-CmpCMo)/ComptMot)+30)};
+Document{AND(ComptColere<32, ComptColere>=30)->MARK(PhColere0)};Document{AND(ComptColere<34, ComptColere>=32)->MARK(PhColere02)};Document{AND(ComptColere<36, ComptColere>=34)->MARK(PhColere04)};Document{AND(ComptColere<38, ComptColere>=36)->MARK(PhColere06)};Document{AND(ComptColere<40, ComptColere>=38)->MARK(PhColere08)};Document{AND(ComptColere<42, ComptColere>=40)->MARK(PhColere1)};Document{AND(ComptColere<44, ComptColere>=42)->MARK(PhColere12)};Document{AND(ComptColere<46, ComptColere>=44)->MARK(PhColere14)};Document{AND(ComptColere<48, ComptColere>=46)->MARK(PhColere16)};Document{AND(ComptColere<50, ComptColere>=48)->MARK(PhColere18)};Document{AND(ComptColere<52, ComptColere>=50)->MARK(PhColere2)};Document{AND(ComptColere<54, ComptColere>=52)->MARK(PhColere22)};Document{AND(ComptColere<56, ComptColere>=54)->MARK(PhColere24)};Document{AND(ComptColere<58, ComptColere>=56)->MARK(PhColere26)};Document{AND(ComptColere<60, ComptColere>=58)->MARK(PhColere28)};Document{IF(ComptColere==60)->MARK(PhColere3)};
+Document{AND(ComptColere<30, ComptColere>=28)->MARK(PhMoColere02)};Document{AND(ComptColere<28, ComptColere>=26)->MARK(PhMoColere04)};Document{AND(ComptColere<26, ComptColere>=24)->MARK(PhMoColere06)};Document{AND(ComptColere<24, ComptColere>=22)->MARK(PhMoColere08)};Document{AND(ComptColere<22, ComptColere>=20)->MARK(PhMoColere1)};Document{AND(ComptColere<20, ComptColere>=18)->MARK(PhMoColere12)};Document{AND(ComptColere<18, ComptColere>=16)->MARK(PhMoColere14)};Document{AND(ComptColere<16, ComptColere>=14)->MARK(PhMoColere16)};Document{AND(ComptColere<14, ComptColere>=12)->MARK(PhMoColere18)};Document{AND(ComptColere<12, ComptColere>=10)->MARK(PhMoColere2)};Document{AND(ComptColere<10, ComptColere>=8)->MARK(PhMoColere22)};Document{AND(ComptColere<8, ComptColere>=6)->MARK(PhMoColere24)};Document{AND(ComptColere<6, ComptColere>=4)->MARK(PhMoColere26)};Document{AND(ComptColere<4, ComptColere>=2)->MARK(PhMoColere28)};Document{IF(ComptColere<2)->MARK(PhMoColere3)};
+
+Document{COUNT(Surprise, ComptSurprise)};
+Document{COUNT(SurprisePl, CmpSPl)};
+Document{COUNT(SurpriseMo, CmpSMo)};
+Document{-> ASSIGN(CmpSMo, CmpSMo*10)};
+Document{IF(ComptMot!=0)-> ASSIGN(ComptSurprise, ((ComptSurprise*10+CmpSPl*30-CmpSMo)/ComptMot)+30)};
+Document{AND(ComptSurprise<32, ComptSurprise>=30)->MARK(PhSurprise0)};Document{AND(ComptSurprise<34, ComptSurprise>=32)->MARK(PhSurprise02)};Document{AND(ComptSurprise<36, ComptSurprise>=34)->MARK(PhSurprise04)};Document{AND(ComptSurprise<38, ComptSurprise>=36)->MARK(PhSurprise06)};Document{AND(ComptSurprise<40, ComptSurprise>=38)->MARK(PhSurprise08)};Document{AND(ComptSurprise<42, ComptSurprise>=40)->MARK(PhSurprise1)};Document{AND(ComptSurprise<44, ComptSurprise>=42)->MARK(PhSurprise12)};Document{AND(ComptSurprise<46, ComptSurprise>=44)->MARK(PhSurprise14)};Document{AND(ComptSurprise<48, ComptSurprise>=46)->MARK(PhSurprise16)};Document{AND(ComptSurprise<50, ComptSurprise>=48)->MARK(PhSurprise18)};Document{AND(ComptSurprise<52, ComptSurprise>=50)->MARK(PhSurprise2)};Document{AND(ComptSurprise<54, ComptSurprise>=52)->MARK(PhSurprise22)};Document{AND(ComptSurprise<56, ComptSurprise>=54)->MARK(PhSurprise24)};Document{AND(ComptSurprise<58, ComptSurprise>=56)->MARK(PhSurprise26)};Document{AND(ComptSurprise<60, ComptSurprise>=58)->MARK(PhSurprise28)};Document{IF(ComptSurprise==60)->MARK(PhSurprise3)};
+Document{AND(ComptSurprise<30, ComptSurprise>=28)->MARK(PhMoSurprise02)};Document{AND(ComptSurprise<28, ComptSurprise>=26)->MARK(PhMoSurprise04)};Document{AND(ComptSurprise<26, ComptSurprise>=24)->MARK(PhMoSurprise06)};Document{AND(ComptSurprise<24, ComptSurprise>=22)->MARK(PhMoSurprise08)};Document{AND(ComptSurprise<22, ComptSurprise>=20)->MARK(PhMoSurprise1)};Document{AND(ComptSurprise<20, ComptSurprise>=18)->MARK(PhMoSurprise12)};Document{AND(ComptSurprise<18, ComptSurprise>=16)->MARK(PhMoSurprise14)};Document{AND(ComptSurprise<16, ComptSurprise>=14)->MARK(PhMoSurprise16)};Document{AND(ComptSurprise<14, ComptSurprise>=12)->MARK(PhMoSurprise18)};Document{AND(ComptSurprise<12, ComptSurprise>=10)->MARK(PhMoSurprise2)};Document{AND(ComptSurprise<10, ComptSurprise>=8)->MARK(PhMoSurprise22)};Document{AND(ComptSurprise<8, ComptSurprise>=6)->MARK(PhMoSurprise24)};Document{AND(ComptSurprise<6, ComptSurprise>=4)->MARK(PhMoSurprise26)};Document{AND(ComptSurprise<4, ComptSurprise>=2)->MARK(PhMoSurprise28)};Document{IF(ComptSurprise<2)->MARK(PhMoSurprise3)};
+
+Document{COUNT(Peur, ComptPeur)};
+Document{COUNT(PeurPl, CmpPPl)};
+Document{COUNT(PeurMo, CmpPMo)};
+Document{COUNT(VerbPeur, ComptVerbPeur)}
+Document{-> ASSIGN(CmpPMo, CmpPMo*10)};
+Document{IF(ComptMot!=0)-> ASSIGN(ComptPeur, (((ComptPeur+ComptVerbPeur)*10+CmpPPl*30-CmpPMo)/ComptMot)+30)};
+Document{AND(ComptPeur<32, ComptPeur>=30)->MARK(PhPeur0)};Document{AND(ComptPeur<34, ComptPeur>=32)->MARK(PhPeur02)};Document{AND(ComptPeur<36, ComptPeur>=34)->MARK(PhPeur04)};Document{AND(ComptPeur<38, ComptPeur>=36)->MARK(PhPeur06)};Document{AND(ComptPeur<40, ComptPeur>=38)->MARK(PhPeur08)};Document{AND(ComptPeur<42, ComptPeur>=40)->MARK(PhPeur1)};Document{AND(ComptPeur<44, ComptPeur>=42)->MARK(PhPeur12)};Document{AND(ComptPeur<46, ComptPeur>=44)->MARK(PhPeur14)};Document{AND(ComptPeur<48, ComptPeur>=46)->MARK(PhPeur16)};Document{AND(ComptPeur<50, ComptPeur>=58)->MARK(PhPeur18)};Document{AND(ComptPeur<52, ComptPeur>=50)->MARK(PhPeur2)};Document{AND(ComptPeur<54, ComptPeur>=52)->MARK(PhPeur22)};Document{AND(ComptPeur<56, ComptPeur>=54)->MARK(PhPeur24)};Document{AND(ComptPeur<58, ComptPeur>=56)->MARK(PhPeur26)};Document{AND(ComptPeur<60, ComptPeur>=58)->MARK(PhPeur28)};Document{IF(ComptPeur==60)->MARK(PhPeur3)};
+Document{AND(ComptPeur<30, ComptPeur>=28)->MARK(PhMoPeur02)};Document{AND(ComptPeur<28, ComptPeur>=26)->MARK(PhMoPeur04)};Document{AND(ComptPeur<26, ComptPeur>=24)->MARK(PhMoPeur06)};Document{AND(ComptPeur<24, ComptPeur>=22)->MARK(PhMoPeur08)};Document{AND(ComptPeur<22, ComptPeur>=20)->MARK(PhMoPeur1)};Document{AND(ComptPeur<20, ComptPeur>=18)->MARK(PhMoPeur12)};Document{AND(ComptPeur<18, ComptPeur>=16)->MARK(PhMoPeur14)};Document{AND(ComptPeur<16, ComptPeur>=14)->MARK(PhMoPeur16)};Document{AND(ComptPeur<14, ComptPeur>=12)->MARK(PhMoPeur18)};Document{AND(ComptPeur<12, ComptPeur>=10)->MARK(PhMoPeur2)};Document{AND(ComptPeur<10, ComptPeur>=8)->MARK(PhMoPeur22)};Document{AND(ComptPeur<8, ComptPeur>=6)->MARK(PhMoPeur24)};Document{AND(ComptPeur<6, ComptPeur>=4)->MARK(PhMoPeur26)};Document{AND(ComptPeur<4, ComptPeur>=2)->MARK(PhMoPeur28)};Document{IF(ComptPeur<2)->MARK(PhMoPeur3)};
+
+Document{COUNT(Degout, ComptDegout)};
+Document{COUNT(DegoutPl, CmpDPl)};
+Document{COUNT(DegoutMo, CmpDMo)};
+Document{-> ASSIGN(CmpDMo, CmpDMo*10)};
+Document{IF(ComptMot!=0)-> ASSIGN(ComptDegout, ((ComptDegout*10+CmpDPl*30-CmpDMo)/ComptMot)+30)};
+Document{AND(ComptDegout<32, ComptDegout>=30)->MARK(PhDegout0)};Document{AND(ComptDegout<34, ComptDegout>=32)->MARK(PhDegout02)};Document{AND(ComptDegout<36, ComptDegout>=34)->MARK(PhDegout04)};Document{AND(ComptDegout<38, ComptDegout>=36)->MARK(PhDegout06)};Document{AND(ComptDegout<40, ComptDegout>=38)->MARK(PhDegout08)};Document{AND(ComptDegout<42, ComptDegout>=40)->MARK(PhDegout1)};Document{AND(ComptDegout<44, ComptDegout>=42)->MARK(PhDegout12)};Document{AND(ComptDegout<46, ComptDegout>=44)->MARK(PhDegout14)};Document{AND(ComptDegout<48, ComptDegout>=46)->MARK(PhDegout16)};Document{AND(ComptDegout<50, ComptDegout>=48)->MARK(PhDegout18)};Document{AND(ComptDegout<52, ComptDegout>=50)->MARK(PhDegout2)};Document{AND(ComptDegout<54, ComptDegout>=52)->MARK(PhDegout22)};Document{AND(ComptDegout<56, ComptDegout>=54)->MARK(PhDegout24)};Document{AND(ComptDegout<58, ComptDegout>=56)->MARK(PhDegout26)};Document{AND(ComptDegout<60, ComptDegout>=58)->MARK(PhDegout28)};Document{IF(ComptDegout==60)->MARK(PhDegout3)};
+Document{AND(ComptDegout<30, ComptDegout>=28)->MARK(PhMoDegout02)};Document{AND(ComptDegout<28, ComptDegout>=26)->MARK(PhMoDegout04)};Document{AND(ComptDegout<26, ComptDegout>=24)->MARK(PhMoDegout06)};Document{AND(ComptDegout<24, ComptDegout>=22)->MARK(PhMoDegout08)};Document{AND(ComptDegout<22, ComptDegout>=20)->MARK(PhMoDegout1)};Document{AND(ComptDegout<20, ComptDegout>=18)->MARK(PhMoDegout12)};Document{AND(ComptDegout<18, ComptDegout>=16)->MARK(PhMoDegout14)};Document{AND(ComptDegout<16, ComptDegout>=14)->MARK(PhMoDegout16)};Document{AND(ComptDegout<14, ComptDegout>=12)->MARK(PhMoDegout18)};Document{AND(ComptDegout<12, ComptDegout>=10)->MARK(PhMoDegout2)};Document{AND(ComptDegout<10, ComptDegout>=8)->MARK(PhMoDegout22)};Document{AND(ComptDegout<8, ComptDegout>=6)->MARK(PhMoDegout24)};Document{AND(ComptDegout<6, ComptDegout>=4)->MARK(PhMoDegout26)};Document{AND(ComptDegout<4, ComptDegout>=2)->MARK(PhMoDegout28)};Document{IF(ComptDegout<2)->MARK(PhMoDegout3)};
+
