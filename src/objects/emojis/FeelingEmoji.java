@@ -22,7 +22,7 @@ import java.util.HashMap;
  */
 public class FeelingEmoji extends Emoji{
 
-    private HashMap scores;
+    private HashMap<String, Float> scores;
 
     /**
      * Class constructor
@@ -38,11 +38,11 @@ public class FeelingEmoji extends Emoji{
     }
 
     //Setters and Getters
-    public HashMap getScores() {
+    public HashMap<String, Float> getScores() {
         return this.scores;
     }
 
-    public void setScores(HashMap scores) {
+    public void setScores(HashMap<String, Float> scores) {
         this.scores = scores;
     }
 
