@@ -1,5 +1,6 @@
 package methods;
 
+import constants.Constants;
 import objects.emojis.Emoji;
 import objects.emojis.FeelingEmoji;
 
@@ -60,7 +61,7 @@ public class InitializeData {
         FeelingEmoji feelingEmoji;
         String emote;
         String name;
-        String feelings[]={"pos", "joy", "sadness", "love", "surprise", "fear", "anger"};
+        String feelings[]= Constants.feelings;
         ArrayList<String[]> lines = LoadData.getDataFromCSV(csvFilename, parser);
         //each line of the file is an object
         for (String[] line : lines) {
