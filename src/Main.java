@@ -36,7 +36,7 @@ public class Main {
         ArrayList<Emoji> recommendeddEmojiList = new ArrayList<>();
 
         //Recommendation type 1 :
-        //TODO
+        //TODO compare emojis and text scores and return emotes
 
         //Recommendation type 2 :
         for (Emoji wordE : wordEmojiArrayList) {

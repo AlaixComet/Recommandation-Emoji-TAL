@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  * Methods to retrieve data from files
  * @author Alexis
@@ -48,5 +50,12 @@ public class LoadData {
 		}
 
 		return string;
+	}
+
+	public static HashMap getTextScoresFromXmi(String filename){
+    	HashMap hashmap = null;
+		String feelings[]={"pos", "joy", "sadness", "love", "surprise", "fear", "anger"};
+		//TODO read xmi, find feeling values, associate it to the sames Hashmap as Emoji's (key = feelings)
+		return hashmap;
 	}
 }
