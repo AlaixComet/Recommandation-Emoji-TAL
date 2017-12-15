@@ -6,18 +6,17 @@ import java.util.HashMap;
  * FeelingEmoji object extends Emoji's object, adding the notion of score for every feeling we're associating emojis with
  * New variables are :
  * <ul>
- *  <li> Hashmap Score
+ *  <li> Hashmap Score with the String :
  *      <ul>
- *          <li> pos</li>
- *          <li> joy</li>
- *          <li> sadness</li>
- *          <li> love</li>
- *          <li> surprise</li>
- *          <li> fear</li>
- *          <li> anger</li>
+ *          <li> Joie</li>
+ *          <li> Triste</li>
+ *          <li> Degout</li>
+ *          <li> Surprise</li>
+ *          <li> Peur</li>
+ *          <li> Colere</li>
  *      </ul>
+ *      Corresponding to a float score
  *  </li>
- *  <li>float Popularity</li>
  * </ul>
  */
 public class FeelingEmoji extends Emoji{

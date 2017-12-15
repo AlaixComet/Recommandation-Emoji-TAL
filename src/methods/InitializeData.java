@@ -73,9 +73,9 @@ public class InitializeData {
                 name = line[1].substring(2, line[1].length());
                 emote = line[1].substring(0, 1);
             }
-            HashMap scores = new HashMap();
-            for (int i = 2; i<9; i++){
-                scores.put(feelings[i-2],line[i]);
+            HashMap<String, Float> scores = new HashMap();
+            for (int i = 3; i<9; i++){
+                scores.put(feelings[i-3],Float.parseFloat(line[i]));
             }
             feelingEmoji = new FeelingEmoji(line[0],  name, emote, scores);
             feelingEmojiArrayList.add(feelingEmoji);
@@ -83,6 +83,12 @@ public class InitializeData {
         return feelingEmojiArrayList;
     }
 
+    /**
+     * Initialise the popularity attribute value of the emojis from txt
+     * @param emojiArrayList
+     * @param filename
+     * @return
+     */
     public static ArrayList<Emoji> setPopularityOfEmojiArray(ArrayList<Emoji> emojiArrayList,String filename){
         String text =LoadData.getDataFromTxtSingleString(filename);
         for (int i = 0; i<emojiArrayList.size();i++) {
@@ -96,6 +102,12 @@ public class InitializeData {
         return emojiArrayList;
     }
 
+    /**
+     * FeelingEmoji version of the previous setPopularity method
+     * @param feelingEmojiArrayList
+     * @param filename
+     * @return
+     */
     public static ArrayList<FeelingEmoji> setPopularityOfFeelingEmojiArray(ArrayList<FeelingEmoji> feelingEmojiArrayList,String filename){
         String text =LoadData.getDataFromTxtSingleString(filename);
         for (int i = 0; i<feelingEmojiArrayList.size();i++) {

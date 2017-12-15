@@ -6,26 +6,13 @@ import org.w3c.dom.Document;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
-import org.w3c.dom.Node;
 import java.io.IOException;
-
-import org.w3c.dom.traversal.DocumentTraversal;
-import org.w3c.dom.traversal.NodeIterator;
-import org.w3c.dom.traversal.NodeFilter;
-
 import org.xml.sax.SAXException;
-import constants.Constants;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.*;
-
-import java.util.regex.Pattern;
-
 
 /**
  * Methods to retrieve data from files
@@ -63,7 +50,7 @@ public class LoadData {
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
 
 			while ((line = br.readLine()) != null) {
-				string = string+line;
+				string = string+line+"\n";
 			}
 
 		} catch (IOException e) {
@@ -73,13 +60,13 @@ public class LoadData {
 		return string;
 	}
 
-	public static HashMap<String,Float> getDataFromXmi() {
+	public static HashMap<String,Float> getDataFromXmi(String filename) {
         HashMap<String, Float> scoreSentiment = new HashMap<String, Float>();
 
         try {
 			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			final DocumentBuilder parser = factory.newDocumentBuilder();
-			final Document doc = parser.parse("F:\\cours\\M1 SCA\\TAL\\Recommandation-Emoji-TAL\\DetectionSentiment\\output\\texte.xmi");
+			final Document doc = parser.parse(filename);
 			final Element racine = doc.getDocumentElement();
 			final NodeList enfantRacine = racine.getChildNodes();
 			int nbChild = enfantRacine.getLength();
@@ -99,10 +86,4 @@ public class LoadData {
 		}
         return scoreSentiment;
     }
-	public static HashMap getTextScoresFromXmi(String filename){
-    	HashMap hashmap = null;
-		String feelings[]= Constants.feelings;
-		//TODO read xmi, find feeling values, associate it to the sames Hashmap as Emoji's (key = feelings)
-		return hashmap;
-	}
 }
