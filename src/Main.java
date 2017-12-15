@@ -1,3 +1,4 @@
+import methods.LoadData;
 import objects.emojis.Emoji;
 import objects.emojis.FeelingEmoji;
 
@@ -56,5 +57,7 @@ public class Main {
             System.out.println(e.getEmote());
 
         }
+
+        LoadData.getDataFromXmi();
     }
 }

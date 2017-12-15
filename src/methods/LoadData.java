@@ -1,9 +1,28 @@
 package methods;
 
+import org.w3c.dom.Document;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.ParserConfigurationException;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.Node;
+import java.io.IOException;
+
+import org.w3c.dom.traversal.DocumentTraversal;
+import org.w3c.dom.traversal.NodeIterator;
+import org.w3c.dom.traversal.NodeFilter;
+
+import org.xml.sax.SAXException;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.regex.Pattern;
+
 /**
  * Methods to retrieve data from files
  * @author Alexis
@@ -48,5 +67,34 @@ public class LoadData {
 		}
 
 		return string;
+	}
+
+	public static HashMap<String,Integer> getDataFromXmi(){
+		try {
+			HashMap<String,Integer> scoreSentiment = new HashMap<String,Integer>();
+			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+			final DocumentBuilder parser = factory.newDocumentBuilder();
+			final Document doc = parser.parse("F:\\cours\\M1 SCA\\TAL\\Recommandation-Emoji-TAL\\DetectionSentiment\\output\\texte.xmi");
+			final Element racine = doc.getDocumentElement();
+			final NodeList enfantRacine = racine.getChildNodes();
+			int nbChild = enfantRacine.getLength();
+			for (int i = 0;i<nbChild;i++){
+				if(enfantRacine.item(i).getNodeName().contains("annotator:Ph")){
+					String sentiment = enfantRacine.item(i).getNodeName().replace("annotator:Ph","");
+					String [] score = sentiment.split("/d"); //utilisation d'une regex pour sortir le sentiment ET le score qui va avec
+					System.out.println(score[0]);
+				};
+
+			}
+
+		} catch (final ParserConfigurationException e) {
+			e.printStackTrace();
+		}
+		catch (final SAXException e) {
+			e.printStackTrace();
+		}
+		catch (final IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
