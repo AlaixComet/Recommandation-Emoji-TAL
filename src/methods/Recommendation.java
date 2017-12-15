@@ -29,7 +29,9 @@ public class Recommendation {
                 String feeling = feelings[i];
                 float textScore = hash.get(feeling);
                 float eScore = e.getScores().get(feeling);
-                //cases : Emoji score and text score are same sign : feeling is searched
+                //case 1 : Emoji score and text score are same sign : emoji is recommended
+                //case 2 : Emoji score and text score are opposite : emoji is removed from the recommendation
+                //case 3 : One of the two scores is 0 : we don't act
                 if (textScore > 0){
                     if (eScore > 0){
                         relevantFeelingEmojiArrayList.add(e);
