@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 /**
  * Emoji object allowing manipulation of the common data of every emoji
- * All variables are Strings :
+ * Attributes are :
  * <ul>
- *  <li>unicode</li>
- *  <li>name</li>
- *  <li>emote</li>
- *  <li>regex (optional)</li>
- *  <li>popularity (optional)</li>
+ *  <li>String unicode</li>
+ *  <li>String name</li>
+ *  <li>String emote</li>
+ *  <li>ArrayList of String regex (optional)</li>
+ *  <li>int popularity (optional)</li>
  * </ul>
  */
 public class Emoji  implements Comparable<Emoji> {

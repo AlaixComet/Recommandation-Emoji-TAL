@@ -2,10 +2,12 @@ package methods;
 
 import constants.Constants;
 import objects.emojis.FeelingEmoji;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * Class for the recommendation methods
+ */
 public class Recommendation {
 
     /**

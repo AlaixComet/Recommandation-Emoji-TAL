@@ -13,25 +13,16 @@ public class Main {
         //initialisation of emoji corpus
         ArrayList<FeelingEmoji> feelingEmojiArrayList = methods.InitializeData.initializeFeelingEmojis("data/feeling-emoji-list.csv",",");
         ArrayList<Emoji> wordEmojiArrayList = methods.InitializeData.initializeWordEmojis("data/word-emoji-list.csv",",");
-        //emoji popularity
+
+        //attributing emoji's popularity
         feelingEmojiArrayList = methods.InitializeData.setPopularityOfFeelingEmojiArray(feelingEmojiArrayList,"data/emoji-popularity.txt");
         wordEmojiArrayList = methods.InitializeData.setPopularityOfEmojiArray(wordEmojiArrayList,"data/emoji-popularity.txt");
+
         //sorting by popularity
         Collections.sort(feelingEmojiArrayList);
         Collections.sort(wordEmojiArrayList);
 
-        //parcours list exemples and tests
-/*
-        for (FeelingEmoji feelingE : feelingEmojiArrayList) {
-            System.out.println(feelingE.getEmote() +" / "+feelingE.getName() +"     "+feelingE.getScores().get("pos") );
-        }
-*/
-
-/*        for (Emoji wordE : wordEmojiArrayList) {
-            System.out.println(wordE.getEmote() +" / "+wordE.getRegex().get(0));
-        }
-*/
-
+        //Interface for recommandation 2 only from console
         System.out.println("Entrez texte :");
         Scanner sc = new Scanner (System.in);
         String text = sc.nextLine();
