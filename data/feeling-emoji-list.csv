@@ -10,7 +10,7 @@
 1F616,😖 confounded face,-1,-1,0,0,1,0,0
 1F61E,😞 disappointed face,-1,0,0,0,1,0,0
 1F61F,😟 worried face,-1,0,0,0,0,0,0
-1F624,😤 face with steam from nose,-1,-1,0,-1,0,0,1
+1F624,😤 face with steam from nose,-1,-1,0,0,0,0,1
 1F622,😢 crying face,-1,-1,1,0,0,0,0
 1F62D,😭 loudly crying face,-1,-1,1,0,0,0,0
 1F626,😦 frowning face with open mouth,-1,0,0,0,0,0,0
@@ -27,7 +27,6 @@
 1F637,😷 face with medical mask,-1,0,0,0,0,0,0
 1F912,🤒 face with thermometer,-1,0,0,0,0,0,0
 1F915,🤕 face with head-bandage,-1,0,0,0,0,0,0
-1F922,🤢 nauseated face,-1,0,0,0,0,0,0
 1F927,🤧 sneezing face,-1,0,0,0,0,0,0
 1F44E,👎 thumbs down,-1,0,0,0,0,0,0
 1F4A2,💢 anger symbol,-1,-1,0,0,0,0,-1
@@ -39,7 +38,6 @@
 1F636,😶 face without mouth,0,0,0,0,0,0,0
 1F60F,😏 smirking face,0,0,0,0,0,0,0
 1F623,😣 persevering face,0,0,0,0,0,0,0
-1F910,🤐 zipper-mouth face,0,0,0,0,0,0,0
 1F62F,😯 hushed face,0,0,0,0,0,0,0
 1F61D,😝 squinting face with tongue,0,0,0,0,0,0,0
 1F924,🤤 drooling face,0,0,0,0,0,0,0
@@ -61,11 +59,8 @@
 1F60A,😊 smiling face with smiling eyes,1,1,-1,0,0,-1,-1
 1F60B,😋 face savoring food,1,1,-1,0,0,-1,-1
 1F60E,😎 smiling face with sunglasses,1,0,0,0,0,0,-1
-1F60D,😍 smiling face with heart-eyes,1,1,-1,1,0,-1,-1
-1F618,😘 face blowing a kiss,1,1,-1,1,0,-1,-1
 1F617,😗 kissing face,1,1,-1,0,0,-1,-1
 1F619,😙 kissing face with smiling eyes,1,1,-1,0,0,-1,-1
-1F61A,😚 kissing face with closed eyes,1,1,-1,1,0,-1,-1
 263A,☺ smiling face,1,1,-1,0,0,-1,-1
 1F642,🙂 slightly smiling face,1,1,-1,0,0,-1,-1
 1F917,🤗 hugging face,1,1,-1,0,0,-1,-1
@@ -73,7 +68,12 @@
 1F60C,😌 relieved face,1,0,0,0,0,0,0
 1F61B,😛 face with tongue,1,0,0,0,0,0,0
 1F61C,😜 winking face with tongue,1,0,0,0,0,0,0
-1F48F,💏 kiss,1,1,0,1,0,-1,-1
 1F44D,👍 thumbs up,1,0,0,0,0,0,0
 1F44B,👋 waving hand,1,0,0,0,0,0,0
-2764,❤ red heart,1,0,0,1,0,-1,-1
+1F922,🤢 nauseated face,-1,0,0,1,0,0,0
+1F910,🤐 zipper-mouth face,0,0,0,1,0,0,0
+1F60D,😍 smiling face with heart-eyes,1,1,-1,-1,0,-1,-1
+1F618,😘 face blowing a kiss,1,1,-1,-1,0,-1,-1
+1F61A,😚 kissing face with closed eyes,1,1,-1,-1,0,-1,-1
+1F48F,💏 kiss,1,1,0,-1,0,-1,-1
+2764,❤ red heart,1,0,0,-1,0,-1,-1

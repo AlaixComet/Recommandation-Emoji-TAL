@@ -6,26 +6,13 @@ import org.w3c.dom.Document;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
-import org.w3c.dom.Node;
 import java.io.IOException;
-
-import org.w3c.dom.traversal.DocumentTraversal;
-import org.w3c.dom.traversal.NodeIterator;
-import org.w3c.dom.traversal.NodeFilter;
-
 import org.xml.sax.SAXException;
-import constants.Constants;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.*;
-
-import java.util.regex.Pattern;
-
 
 /**
  * Methods to retrieve data from files
