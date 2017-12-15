@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import methods.LoadData;
-=======
 import methods.Recommendation;
->>>>>>> 7ae3d18d5dd1c85b4a327ba161e2c24a7e4bb4b4
 import objects.emojis.Emoji;
 import objects.emojis.FeelingEmoji;
 

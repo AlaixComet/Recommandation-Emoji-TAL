@@ -1,6 +1,6 @@
 package methods;
 
-<<<<<<< HEAD
+
 import org.w3c.dom.Document;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -17,19 +17,15 @@ import org.w3c.dom.traversal.NodeIterator;
 import org.w3c.dom.traversal.NodeFilter;
 
 import org.xml.sax.SAXException;
-=======
 import constants.Constants;
 
->>>>>>> 7ae3d18d5dd1c85b4a327ba161e2c24a7e4bb4b4
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-<<<<<<< HEAD
+import java.util.*;
+
 import java.util.regex.Pattern;
-=======
->>>>>>> 7ae3d18d5dd1c85b4a327ba161e2c24a7e4bb4b4
+
 
 /**
  * Methods to retrieve data from files
@@ -77,40 +73,36 @@ public class LoadData {
 		return string;
 	}
 
-<<<<<<< HEAD
-	public static HashMap<String,Integer> getDataFromXmi(){
-		try {
-			HashMap<String,Integer> scoreSentiment = new HashMap<String,Integer>();
+	public static HashMap<String,Float> getDataFromXmi() {
+        HashMap<String, Float> scoreSentiment = new HashMap<String, Float>();
+
+        try {
 			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			final DocumentBuilder parser = factory.newDocumentBuilder();
 			final Document doc = parser.parse("F:\\cours\\M1 SCA\\TAL\\Recommandation-Emoji-TAL\\DetectionSentiment\\output\\texte.xmi");
 			final Element racine = doc.getDocumentElement();
 			final NodeList enfantRacine = racine.getChildNodes();
 			int nbChild = enfantRacine.getLength();
-			for (int i = 0;i<nbChild;i++){
-				if(enfantRacine.item(i).getNodeName().contains("annotator:Ph")){
-					String sentiment = enfantRacine.item(i).getNodeName().replace("annotator:Ph","");
-					String [] score = sentiment.split("/d"); //utilisation d'une regex pour sortir le sentiment ET le score qui va avec
-					System.out.println(score[0]);
-				};
-
+			for (int i = 0; i < nbChild; i++) {
+				if (enfantRacine.item(i).getNodeName().contains("annotator:Ph")) {
+					String sentiment = enfantRacine.item(i).getNodeName().replace("annotator:Ph", "");
+					String[] score = sentiment.split("Z"); //utilisation d'une regex pour sortir le sentiment ET le score qui va avec
+                    scoreSentiment.put(score[0],Float.parseFloat(score[1]));
+                }
 			}
-
 		} catch (final ParserConfigurationException e) {
 			e.printStackTrace();
-		}
-		catch (final SAXException e) {
+		} catch (final SAXException e) {
+			e.printStackTrace();
+		} catch (final IOException e) {
 			e.printStackTrace();
 		}
-		catch (final IOException e) {
-			e.printStackTrace();
-		}
-=======
+        return scoreSentiment;
+    }
 	public static HashMap getTextScoresFromXmi(String filename){
     	HashMap hashmap = null;
 		String feelings[]= Constants.feelings;
 		//TODO read xmi, find feeling values, associate it to the sames Hashmap as Emoji's (key = feelings)
 		return hashmap;
->>>>>>> 7ae3d18d5dd1c85b4a327ba161e2c24a7e4bb4b4
 	}
 }
