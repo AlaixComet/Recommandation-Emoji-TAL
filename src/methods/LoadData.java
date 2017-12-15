@@ -1,5 +1,6 @@
 package methods;
 
+<<<<<<< HEAD
 import org.w3c.dom.Document;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -16,12 +17,19 @@ import org.w3c.dom.traversal.NodeIterator;
 import org.w3c.dom.traversal.NodeFilter;
 
 import org.xml.sax.SAXException;
+=======
+import constants.Constants;
+
+>>>>>>> 7ae3d18d5dd1c85b4a327ba161e2c24a7e4bb4b4
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+<<<<<<< HEAD
 import java.util.regex.Pattern;
+=======
+>>>>>>> 7ae3d18d5dd1c85b4a327ba161e2c24a7e4bb4b4
 
 /**
  * Methods to retrieve data from files
@@ -69,6 +77,7 @@ public class LoadData {
 		return string;
 	}
 
+<<<<<<< HEAD
 	public static HashMap<String,Integer> getDataFromXmi(){
 		try {
 			HashMap<String,Integer> scoreSentiment = new HashMap<String,Integer>();
@@ -96,5 +105,12 @@ public class LoadData {
 		catch (final IOException e) {
 			e.printStackTrace();
 		}
+=======
+	public static HashMap getTextScoresFromXmi(String filename){
+    	HashMap hashmap = null;
+		String feelings[]= Constants.feelings;
+		//TODO read xmi, find feeling values, associate it to the sames Hashmap as Emoji's (key = feelings)
+		return hashmap;
+>>>>>>> 7ae3d18d5dd1c85b4a327ba161e2c24a7e4bb4b4
 	}
 }

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import methods.LoadData;
+=======
+import methods.Recommendation;
+>>>>>>> 7ae3d18d5dd1c85b4a327ba161e2c24a7e4bb4b4
 import objects.emojis.Emoji;
 import objects.emojis.FeelingEmoji;
 
@@ -35,9 +39,13 @@ public class Main {
         Scanner sc = new Scanner (System.in);
         String text = sc.nextLine();
         ArrayList<Emoji> recommendeddEmojiList = new ArrayList<>();
+        ArrayList<FeelingEmoji> recommendeddFeelingEmojiList = new ArrayList<>();
 
         //Recommendation type 1 :
-        //TODO
+        recommendeddFeelingEmojiList = Recommendation.CompareFeelingScores(methods.LoadData.getTextScoresFromXmi("DetectionSentiment/output/texte.txt.xmu"),feelingEmojiArrayList);
+        for (FeelingEmoji e: recommendeddFeelingEmojiList ) {
+            System.out.println(e.getEmote());
+        }
 
         //Recommendation type 2 :
         for (Emoji wordE : wordEmojiArrayList) {
