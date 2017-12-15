@@ -73,9 +73,9 @@ public class InitializeData {
                 name = line[1].substring(2, line[1].length());
                 emote = line[1].substring(0, 1);
             }
-            HashMap scores = new HashMap();
-            for (int i = 2; i<9; i++){
-                scores.put(feelings[i-2],line[i]);
+            HashMap<String, Float> scores = new HashMap();
+            for (int i = 3; i<9; i++){
+                scores.put(feelings[i-3],Float.parseFloat(line[i]));
             }
             feelingEmoji = new FeelingEmoji(line[0],  name, emote, scores);
             feelingEmojiArrayList.add(feelingEmoji);

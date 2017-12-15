@@ -63,7 +63,7 @@ public class LoadData {
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
 
 			while ((line = br.readLine()) != null) {
-				string = string+line;
+				string = string+line+"\n";
 			}
 
 		} catch (IOException e) {
@@ -73,13 +73,13 @@ public class LoadData {
 		return string;
 	}
 
-	public static HashMap<String,Float> getDataFromXmi() {
+	public static HashMap<String,Float> getDataFromXmi(String filename) {
         HashMap<String, Float> scoreSentiment = new HashMap<String, Float>();
 
         try {
 			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			final DocumentBuilder parser = factory.newDocumentBuilder();
-			final Document doc = parser.parse("F:\\cours\\M1 SCA\\TAL\\Recommandation-Emoji-TAL\\DetectionSentiment\\output\\texte.xmi");
+			final Document doc = parser.parse(filename);
 			final Element racine = doc.getDocumentElement();
 			final NodeList enfantRacine = racine.getChildNodes();
 			int nbChild = enfantRacine.getLength();
@@ -99,10 +99,4 @@ public class LoadData {
 		}
         return scoreSentiment;
     }
-	public static HashMap getTextScoresFromXmi(String filename){
-    	HashMap hashmap = null;
-		String feelings[]= Constants.feelings;
-		//TODO read xmi, find feeling values, associate it to the sames Hashmap as Emoji's (key = feelings)
-		return hashmap;
-	}
 }

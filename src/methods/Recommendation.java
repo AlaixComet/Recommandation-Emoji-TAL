@@ -27,18 +27,23 @@ public class Recommendation {
             //For each feeling
             for (int i = 0; i < feelings.length; i ++){
                 String feeling = feelings[i];
-                float score = hash.get(feeling);
-                //cases : Emoji score > 0 : feeling is searched
-                if (e.getScores().get(feeling) > 0){
-                    relevantFeelingEmojiArrayList.add(e);
-                }
-                //case : score = 0 : feeling is not related
-                else if (e.getScores().get(feeling) == 0){
-
-                }
-                //case : score < 0 : feeling is contradictory
-                else if (e.getScores().get(feeling) < 0){
-                    irrelevantFeelingEmojiArrayList.add(e);
+                float textScore = hash.get(feeling);
+                float eScore = e.getScores().get(feeling);
+                //cases : Emoji score and text score are same sign : feeling is searched
+                if (textScore > 0){
+                    if (eScore > 0){
+                        relevantFeelingEmojiArrayList.add(e);
+                    }
+                    else if (eScore < 0){
+                        irrelevantFeelingEmojiArrayList.add(e);
+                    }
+                } else if (textScore < 0){
+                    if (eScore < 0){
+                        relevantFeelingEmojiArrayList.add(e);
+                    }
+                    else if (eScore > 0){
+                        irrelevantFeelingEmojiArrayList.add(e);
+                    }
                 }
             }
         }
